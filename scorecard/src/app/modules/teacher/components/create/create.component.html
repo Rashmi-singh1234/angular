@@ -1,0 +1,33 @@
+<section>
+
+    <form [formGroup]="userForm" class="form1 mx-auto" (ngSubmit)="userSubmit()">
+        <div *ngIf ="errmesg=='error'"class=" form-group mx-auto alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>error</strong>
+        </div>
+        <div *ngIf ="sucessmsg=='sucess'"class=" form-group mx-auto alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>data inserted</strong>
+        </div>
+        <div class="form-group mx-auto">
+            <label for="exampleInputPassword1">RollNo</label>
+            <input type="text" class="form-control" formControlName="RNO" id="exampleInputPassword1">
+        </div>
+        <div class="form-group mx-auto">
+            <label for="exampleInputPassword1">Name</label>
+            <input type="text" class="form-control" formControlName="NAME" id="exampleInputPassword1">
+        </div>
+        <div class="form-group mx-auto">
+            <label for="exampleInputPassword1">Date of birth</label>
+            <input type="date" class="form-control" formControlName="DOB" id="exampleInputPassword1">
+        </div>
+        <div class="form-group mx-auto">
+            <label for="exampleInputPassword1">Marks</label>
+            <input type="text" class="form-control" formControlName="MARKS" id="exampleInputPassword1">
+        </div>
+        <br>
+        <div class="form-group mx-auto">
+            <input type="submit" [disabled]="userForm.invalid" class="btn btn-primary" id="exampleInputPassword1">
+        </div>
+    </form>
+</section>

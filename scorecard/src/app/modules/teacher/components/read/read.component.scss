@@ -1,0 +1,22 @@
+.action{
+    display: inline-block;
+}
+.addbook{
+    width: 99%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // border: 2px solid black;
+    height: 100%;
+}
+.w3-container {
+    padding: 0.01em 16px;
+    width: 70%;
+}

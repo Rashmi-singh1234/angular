@@ -1,0 +1,15 @@
+<section>
+    
+    <div class="form-group mx-auto">
+        <label for="exampleInputPassword1">RollNo</label>
+        <input type="text" class="form-control"  id="exampleInputPassword1" #rno >
+    </div>
+    <div class="form-group mx-auto">
+        <label for="exampleInputPassword1">Name</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" #name>
+    </div>
+    <br>
+    <div class="form-group mx-auto">
+        <input routerLink="display" type="submit" class="btn btn-primary" id="exampleInputPassword1" value="search" (click)="userSubmit(rno.value,name.value)">
+    </div>
+</section>

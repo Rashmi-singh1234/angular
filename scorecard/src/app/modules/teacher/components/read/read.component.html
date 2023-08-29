@@ -1,0 +1,35 @@
+<!--Navbar-->
+<div Class="navbar navbar-expand-lg navbar-dark cyan row">
+  <div class="col-lg-12  d-flex justify-content-center">
+  <div><a class="navbar-brand" href="#">Result Management System</a></div>
+</div>
+
+</div>
+
+<section>
+  <div class="w3-container">
+    <table class="w3-table-all">
+      <thead>
+        <tr class="w3-green">
+          <th>RollNo</th>
+          <th>Name</th>
+          <th>Date Of Birth</th>
+          <th>Marks</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tr *ngFor='let us of readdata'>
+        <td >{{us.RollNO}}</td>
+          <td>{{us.Name}}</td>
+          <td>{{us.DOB}}</td>
+          <td>{{us.MARKS}}</td>
+          <td class="action"> <a routerLink="edit" class="btn btn-primary" (click)="editData(us.RollNO)">Edit</a></td>
+          <td class="action"> <a  class="btn btn-danger" (click)="deleteId(us.RollNO)" style="color: white;">Delete</a></td>
+     </tr>
+    </table>
+  </div>
+  <div class="addbook">
+    <a routerLink="adddetails" class="btn btn-primary" style="color: white;">addBook</a>
+    </div>
+  </section>
+   
